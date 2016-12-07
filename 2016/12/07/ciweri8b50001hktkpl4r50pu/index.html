@@ -3,14 +3,33 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2016/12 | Go To Development</title>
+  <title>ssh without password | Go To Development</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Go To Development">
-<meta property="og:url" content="http://gotodev.cn/archives/2016/12/index.html">
+  <meta name="description" content="1. Generate key
+ssh-keygen -t rsa -C “peter@myhost” -f ~/ssh/myhost
+2. Copy pub key to remote
+ssh-copy-id -i ~/ssh/myhost.pub ${user}@${remote_host}
+3. Login via private key
+ssh -i ~/ssh/myhost ${user">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ssh without password">
+<meta property="og:url" content="http://gotodev.cn/2016/12/07/ciweri8b50001hktkpl4r50pu/index.html">
 <meta property="og:site_name" content="Go To Development">
+<meta property="og:description" content="1. Generate key
+ssh-keygen -t rsa -C “peter@myhost” -f ~/ssh/myhost
+2. Copy pub key to remote
+ssh-copy-id -i ~/ssh/myhost.pub ${user}@${remote_host}
+3. Login via private key
+ssh -i ~/ssh/myhost ${user">
+<meta property="og:updated_time" content="2016-12-07T08:58:06.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Go To Development">
+<meta name="twitter:title" content="ssh without password">
+<meta name="twitter:description" content="1. Generate key
+ssh-keygen -t rsa -C “peter@myhost” -f ~/ssh/myhost
+2. Copy pub key to remote
+ssh-copy-id -i ~/ssh/myhost.pub ${user}@${remote_host}
+3. Login via private key
+ssh -i ~/ssh/myhost ${user">
   
     <link rel="alternate" href="/atom.xml" title="Go To Development" type="application/atom+xml">
   
@@ -59,77 +78,66 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2016/12/07/ciweri8an0000hktk5tivwruw/" class="archive-article-date">
-  <time datetime="2016-12-07T09:50:31.000Z" itemprop="datePublished">Dec 7</time>
+        <section id="main"><article id="post-ssh-without-password" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/12/07/ciweri8b50001hktkpl4r50pu/" class="article-date">
+  <time datetime="2016-12-07T08:48:43.000Z" itemprop="datePublished">2016-12-07</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/07/ciweri8an0000hktk5tivwruw/">WeekHashMap and HashMap</a>
+    <h1 class="article-title" itemprop="name">
+      ssh without password
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2016/12/07/ciweri8b50001hktkpl4r50pu/" class="archive-article-date">
-  <time datetime="2016-12-07T08:48:43.000Z" itemprop="datePublished">Dec 7</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/07/ciweri8b50001hktkpl4r50pu/">ssh without password</a>
-    </h1>
-  
+        <p><strong>1. Generate key</strong></p>
+<p>ssh-keygen -t rsa -C “peter@myhost” -f ~/ssh/myhost</p>
+<p><strong>2. Copy pub key to remote</strong></p>
+<p>ssh-copy-id -i ~/ssh/myhost.pub ${user}@${remote_host}</p>
+<p><strong>3. Login via private key</strong></p>
+<p>ssh -i ~/ssh/myhost ${user}@${remote_host}</p>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2016/12/06/ciweri8b60002hktky8tz1kui/" class="archive-article-date">
-  <time datetime="2016-12-06T01:24:37.000Z" itemprop="datePublished">Dec 6</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/06/ciweri8b60002hktky8tz1kui/">Hello World</a>
-    </h1>
-  
-
-    </header>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://gotodev.cn/2016/12/07/ciweri8b50001hktkpl4r50pu/" data-id="ciweri8b50001hktkpl4r50pu" class="article-share-link">Share</a>
+      
+      
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/12/07/ciweri8an0000hktk5tivwruw/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          WeekHashMap and HashMap
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/12/06/ciweri8b60002hktky8tz1kui/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 </section>
         

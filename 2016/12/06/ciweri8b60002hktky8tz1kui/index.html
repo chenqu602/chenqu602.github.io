@@ -3,14 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Go To Development</title>
+  <title>Hello World | Go To Development</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Go To Development">
-<meta property="og:url" content="http://gotodev.cn/index.html">
+  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hello World">
+<meta property="og:url" content="http://gotodev.cn/2016/12/06/ciweri8b60002hktky8tz1kui/index.html">
 <meta property="og:site_name" content="Go To Development">
+<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick">
+<meta property="og:updated_time" content="2016-12-06T01:24:37.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Go To Development">
+<meta name="twitter:title" content="Hello World">
+<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick">
   
     <link rel="alternate" href="/atom.xml" title="Go To Development" type="application/atom+xml">
   
@@ -59,139 +66,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-WeekHashMap-and-HashMap" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/12/07/ciweri8an0000hktk5tivwruw/" class="article-date">
-  <time datetime="2016-12-07T09:50:31.000Z" itemprop="datePublished">2016-12-07</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/07/ciweri8an0000hktk5tivwruw/">WeekHashMap and HashMap</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>WeakHashMap，此种Map的特点是，当除了自身有对key的引用外，此key没有其他引用那么此map会自动丢弃此值。</p>
-<p>见实例：此例子中声明了两个Map对象，一个是HashMap，一个是WeakHashMap，同时向两个map中放入a、b两个对象，当HashMap  remove掉a 并且将a、b都指向null时，WeakHashMap中的a将自动被回收掉。出现这个状况的原因是，对于a对象而言，当HashMap  remove掉并且将a指向null后，除了WeakHashMap中还保存a外已经没有指向a的指针了，所以WeakHashMap会自动舍弃掉a，而对于b对象虽然指向了null，但HashMap中还有指向b的指针，所以<br>WeakHashMap将会保留。</p>
-<pre><code>package test;  
-
-import java.util.HashMap;  
-import java.util.Iterator;  
-import java.util.Map;  
-import java.util.WeakHashMap;  
-
-
-
-
-public class Test {  
-
-
-public static void main(String[] args) throws Exception {  
-
-    String a = new String(&quot;a&quot;);  
-
-    String b = new String(&quot;b&quot;);  
-
-    Map weakmap = new WeakHashMap();  
-
-    Map map = new HashMap();  
-
-    map.put(a, &quot;aaa&quot;);  
-    map.put(b, &quot;bbb&quot;);  
-
-    weakmap.put(a, &quot;aaa&quot;);  
-    weakmap.put(b, &quot;bbb&quot;);  
-
-    map.remove(a);  
-
-    a=null;  
-    b=null;  
-
-    System.gc();  
-    Iterator i = map.entrySet().iterator();  
-    while (i.hasNext()) {  
-        Map.Entry en = (Map.Entry)i.next();  
-        System.out.println(&quot;map:&quot;+en.getKey()+&quot;:&quot;+en.getValue());  
-    }  
-
-    Iterator j = weakmap.entrySet().iterator();  
-    while (j.hasNext()) {  
-        Map.Entry en = (Map.Entry)j.next();  
-        System.out.println(&quot;weakmap:&quot;+en.getKey()+&quot;:&quot;+en.getValue());  
-
-    }  
-}  
-
-}
-</code></pre>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://gotodev.cn/2016/12/07/ciweri8an0000hktk5tivwruw/" data-id="ciweri8an0000hktk5tivwruw" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-ssh-without-password" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/12/07/ciweri8b50001hktkpl4r50pu/" class="article-date">
-  <time datetime="2016-12-07T08:48:43.000Z" itemprop="datePublished">2016-12-07</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/07/ciweri8b50001hktkpl4r50pu/">ssh without password</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>1. Generate key</strong></p>
-<p>ssh-keygen -t rsa -C “peter@myhost” -f ~/ssh/myhost</p>
-<p><strong>2. Copy pub key to remote</strong></p>
-<p>ssh-copy-id -i ~/ssh/myhost.pub ${user}@${remote_host}</p>
-<p><strong>3. Login via private key</strong></p>
-<p>ssh -i ~/ssh/myhost ${user}@${remote_host}</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://gotodev.cn/2016/12/07/ciweri8b50001hktkpl4r50pu/" data-id="ciweri8b50001hktkpl4r50pu" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/12/06/ciweri8b60002hktky8tz1kui/" class="article-date">
   <time datetime="2016-12-06T01:24:37.000Z" itemprop="datePublished">2016-12-06</time>
@@ -204,8 +79,8 @@ public static void main(String[] args) throws Exception {
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/06/ciweri8b60002hktky8tz1kui/">Hello World</a>
+    <h1 class="article-title" itemprop="name">
+      Hello World
     </h1>
   
 
@@ -232,10 +107,23 @@ public static void main(String[] args) throws Exception {
     </footer>
   </div>
   
-</article>
-
+    
+<nav id="article-nav">
+  
+    <a href="/2016/12/07/ciweri8b50001hktkpl4r50pu/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          ssh without password
+        
+      </div>
+    </a>
+  
+  
+</nav>
 
   
+</article>
 
 </section>
         
